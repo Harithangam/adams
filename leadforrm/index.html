@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adams Tech - Web Lead</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f8fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 15px;
+    }
+    .form-container {
+      background-color: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2d3e50;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: 500;
+    }
+    input[type="text"], input[type="email"], select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #0070d2;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Contact Adams Technologies</h2>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWd000006dfRF" method="POST">
+      <input type="hidden" name="oid" value="00DWd000006dfRF">
+      <input type="hidden" name="retURL" value="https://www.adamstech.in/">
+
+      <!-- Hidden Lead Source -->
+      <input type="hidden" name="lead_source" value="Web" />
+
+      <label for="first_name">First Name</label>
+      <input id="first_name" name="first_name" type="text" maxlength="40" required>
+
+      <label for="last_name">Last Name</label>
+      <input id="last_name" name="last_name" type="text" maxlength="80" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" maxlength="80" required>
+
+      <label for="mobile">Mobile</label>
+      <input id="mobile" name="mobile" type="text" maxlength="40" required>
+
+      <label for="company">Company</label>
+      <input id="company" name="company" type="text" maxlength="40" required>
+
+      <label for="city">City</label>
+      <input id="city" name="city" type="text" maxlength="40">
+
+      <label for="state">State/Province</label>
+      <input id="state" name="state" type="text" maxlength="20">
+
+      <input type="submit" name="submit" value="Submit">
+    </form>
+  </div>
+
+</body>
+</html>
